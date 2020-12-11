@@ -22,4 +22,11 @@ describe('LandingPageComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render the greeting card', () => {
+    const compiled = fixture.nativeElement;
+    const greeting = compiled.querySelector('[data-greeting]');
+    expect(greeting).toBeTruthy();
+  });
+
 });

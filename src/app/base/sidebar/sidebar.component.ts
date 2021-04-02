@@ -9,15 +9,5 @@ import { NbMenuItem } from '@nebular/theme';
 })
 export class SidebarComponent {
 
- items: NbMenuItem[] = [
-    {
-      title: 'Practice',
-    },
-    {
-      title: 'Songs',
-    },
-    {
-      title: 'Practice Diary'
-    },
-  ];
+
 }

@@ -10,5 +10,11 @@
   ],
   "include": [
     "src/**/*.d.ts"
+  ],
+  "exclude": [
+    "setup-jest.ts",
+    "**/*.spec.ts",
+    "**/testHelpers.ts",
+    "**/environment.*.ts"
   ]
 }

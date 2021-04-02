@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SessionLogComponent } from './session-log.component';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 describe('SessionLogComponent', () => {
   let fixture: ComponentFixture<SessionLogComponent>;
@@ -7,7 +8,8 @@ describe('SessionLogComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SessionLogComponent ]
+      declarations: [ SessionLogComponent ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));

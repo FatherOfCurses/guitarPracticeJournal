@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCardModule } from '@angular/material/card';
-import {NbCardModule, NbLayoutModule, NbListModule, NbMenuModule, NbSidebarModule, NbThemeModule} from '@nebular/theme';
+import {NbButtonModule, NbCardModule, NbLayoutModule, NbListModule, NbMenuModule, NbSidebarModule, NbThemeModule} from '@nebular/theme';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -39,6 +39,7 @@ import {routes} from '@nebular/auth';
     NbSidebarModule.forRoot(),
     NbMenuModule.forRoot(),
     RouterModule.forRoot(routes, {useHash: true}),
+    NbButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

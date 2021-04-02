@@ -10,6 +10,7 @@ import { SidebarMenuComponent } from './sidebar/sidebar-menu/sidebar-menu.compon
     NbCardModule
   ],
   exports: [
+    SidebarMenuComponent
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

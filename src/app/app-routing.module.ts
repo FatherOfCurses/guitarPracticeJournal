@@ -6,7 +6,7 @@ import { SessionLogComponent } from './features/session-log/session-log.componen
 
 const routes: Routes = [
   {path: '' , component: LandingPageComponent},
-  {path: 'session', component: SessionLogComponent}
+  {path: 'session', component: SessionLogComponent},
 ];
 
 @NgModule({

@@ -35,6 +35,7 @@
     "note-parser": "^2.0.1",
     "path": "^0.12.7",
     "rxjs": "~6.5.4",
+    "ts-jest": "^26.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },
@@ -59,9 +60,7 @@
     "tslint": "~5.18.0",
     "typescript": "4.0.5"
   },
-  "jest": {
-
-  },
+  "jest": {},
   "jest-junit": {
     "outputDirectory": "./reports",
     "outputName": "junit.xml"

@@ -29,4 +29,6 @@ describe('SessionLogComponent', () => {
     const newSessionButton = compiled.querySelector('[data-new-session-button]');
     expect(newSessionButton).toBeTruthy();
   });
+
+  // test to ensure session selection displays only when new session button is clicked
 });

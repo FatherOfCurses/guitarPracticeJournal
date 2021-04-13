@@ -3,7 +3,7 @@ import {NbCardModule, NbLayoutModule, NbMenuComponent, NbMenuModule} from '@nebu
 
 
 @NgModule({
-  declarations: [ NbMenuComponent ],
+  declarations: [ ],
   imports: [ NbCardModule, NbLayoutModule, NbMenuModule]
 })
 

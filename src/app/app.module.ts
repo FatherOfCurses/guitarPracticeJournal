@@ -21,6 +21,7 @@ import {FooterComponent} from './base/footer/footer.component';
 import {SidebarComponent} from './base/sidebar/sidebar.component';
 import {RouterModule} from '@angular/router';
 import {routes} from '@nebular/auth';
+import {SidebarModule} from './base/sidebar/sidebar.module';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import {routes} from '@nebular/auth';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SidebarModule,
     ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
     NbThemeModule.forRoot(),
     NbLayoutModule,

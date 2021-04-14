@@ -12,7 +12,7 @@ export class SidebarComponent {
   items: NbMenuItem[] = [
     {
       title: 'Practice',
-      link: 'session'
+      link: '/session'
     },
     {
       title: 'Songs',

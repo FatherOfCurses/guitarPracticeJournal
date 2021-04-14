@@ -3,11 +3,11 @@ import { NgModule } from '@angular/core';
 import {
   NbA11yModule,
   NbButtonModule,
-  NbCardModule,
+  NbCardModule, NbInputModule,
   NbLayoutModule,
   NbListModule, NbMenuComponent,
   NbMenuModule,
-  NbSidebarModule,
+  NbSidebarModule, NbStepperModule,
   NbThemeModule
 } from '@nebular/theme';
 import { AppRoutingModule } from './app-routing.module';
@@ -22,6 +22,8 @@ import {SidebarComponent} from './base/sidebar/sidebar.component';
 import {RouterModule} from '@angular/router';
 import {routes} from '@nebular/auth';
 import {SidebarModule} from './base/sidebar/sidebar.module';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,7 @@ import {SidebarModule} from './base/sidebar/sidebar.module';
     SessionLogComponent,
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +47,11 @@ import {SidebarModule} from './base/sidebar/sidebar.module';
     NbMenuModule.forRoot(),
     RouterModule.forRoot(routes, {useHash: true}),
     NbButtonModule,
-    NbA11yModule.forRoot()
+    NbA11yModule.forRoot(),
+    NbStepperModule,
+    NbInputModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

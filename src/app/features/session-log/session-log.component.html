@@ -1,18 +1,39 @@
 <nb-card>
-  <nb-layout-header>Start a session</nb-layout-header>
-  <button
-    nbButton
-    data-new-session-button>New Session</button>
+  <nb-layout-header><h2>Start a session</h2></nb-layout-header>
 </nb-card>
 
-<nb-card-body data-session-choice *ngIf="step2">
-  <nb-list>
-    <nb-list-item>I'm Feeling Lucky</nb-list-item>
-    <nb-list-item>Scales</nb-list-item>
-    <nb-list-item>Calisthenics</nb-list-item>
-    <nb-list-item>Work on a current song</nb-list-item>
-    <nb-list-item>Add a new song</nb-list-item>
-  </nb-list>
-</nb-card-body>
+<nb-stepper orientation="horizontal" [linear]="true" data-stepper>
+  <nb-step data-step-1 [stepControl]="practiceTime" label="Step 1">
+      <form [formGroup]="practiceTime" (ngSubmit)="onFirstSubmit()" class="step-container">
+        <h4>How long do you want to practice?</h4>
+        <div class="input-group">
+          <input nbInput type="text" placeholder="Enter desired time in minutes" class="form-control" formControlName="firstCtrl"
+                 [ngClass]="{'form-control-danger': practiceTime.invalid && (practiceTime.dirty || practiceTime.touched)}">
+        </div>
+        <button nbButton disabled nbStepperNext data-prev-button-1>Prev</button>
+        <button nbButton nbStepperNext data-next-button-1>Next</button>
+      </form>
+  </nb-step>
+  <nb-step data-step-2 [stepControl]="whatToPractice" label="Step 2">
+    <form [formGroup]="whatToPractice" (ngSubmit)="onSecondSubmit()" class="step-container">
+      <h4>What do you want to practice?</h4>
+      <input nbInput type="text" placeholder="Enter what you're going to practice" class="form-control" formControlName="secondCtrl"
+             [ngClass]="{'form-control-danger': whatToPractice.invalid && (whatToPractice.dirty || whatToPractice.touched)}">
+      <button nbButton nbStepperNext data-prev-button-2>Prev</button>
+      <button nbButton nbStepperNext data-next-button-2>Next</button>
+    </form>
+  </nb-step>
+</nb-stepper>
+
+
+<!--<nb-card-body data-session-choice>-->
+<!--  <nb-list>-->
+<!--    <nb-list-item>I'm Feeling Lucky</nb-list-item>-->
+<!--    <nb-list-item>Scales</nb-list-item>-->
+<!--    <nb-list-item>Calisthenics</nb-list-item>-->
+<!--    <nb-list-item>Work on a current song</nb-list-item>-->
+<!--    <nb-list-item>Add a new song</nb-list-item>-->
+<!--  </nb-list>-->
+<!--</nb-card-body>-->
 
 <!-- table displaying previous sessions -->

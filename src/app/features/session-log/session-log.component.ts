@@ -11,18 +11,18 @@ export class SessionLogComponent implements OnInit {
   whatToPractice: FormGroup;
   sessionGoal: FormGroup;
 
-  constructor(private sessionLogForm: FormBuilder) { }
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
-    this.practiceTime = this.sessionLogForm.group({
+    this.practiceTime = this.fb.group({
       firstCtrl: ['', Validators.required],
     });
 
-    this.whatToPractice = this.sessionLogForm.group({
+    this.whatToPractice = this.fb.group({
       secondCtrl: ['', Validators.required],
     });
 
-    this.sessionGoal = this.sessionLogForm.group({
+    this.sessionGoal = this.fb.group({
       thirdCtrl: ['', Validators.required],
     });
   }

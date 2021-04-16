@@ -1,5 +1,13 @@
 import {NgModule} from '@angular/core';
-import {NbButtonModule, NbCardModule, NbInputModule, NbLayoutModule, NbStepperModule, NbTableModule} from '@nebular/theme';
+import {
+  NbButtonModule,
+  NbCardModule,
+  NbInputModule,
+  NbLayoutModule,
+  NbProgressBarModule,
+  NbStepperModule,
+  NbTableModule
+} from '@nebular/theme';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {SessionLogComponent} from './session-log/session-log.component';
 import {CommonModule} from '@angular/common';
@@ -19,7 +27,8 @@ import { SessionRecordComponent } from './session-record/session-record.componen
     NbCardModule,
     CommonModule,
     NbButtonModule,
-    NbTableModule
+    NbTableModule,
+    NbProgressBarModule
   ],
   providers: []
 })

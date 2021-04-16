@@ -1,6 +1,6 @@
 export class Session {
-  date: string;
-  length: number;
-  scale: string;
-  song: string;
+  date = '';
+  practiceTime = 0;
+  whatToPractice = '';
+  sessionIntent = '';
 }

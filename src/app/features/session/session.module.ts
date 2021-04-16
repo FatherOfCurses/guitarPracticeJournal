@@ -1,12 +1,14 @@
 import {NgModule} from '@angular/core';
-import {NbButtonModule, NbCardModule, NbInputModule, NbLayoutModule, NbStepperModule} from '@nebular/theme';
+import {NbButtonModule, NbCardModule, NbInputModule, NbLayoutModule, NbStepperModule, NbTableModule} from '@nebular/theme';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {SessionLogComponent} from './session-log.component';
+import {SessionLogComponent} from './session-log/session-log.component';
 import {CommonModule} from '@angular/common';
+import { SessionRecordComponent } from './session-record/session-record.component';
 
 @NgModule({
   declarations: [
     SessionLogComponent,
+    SessionRecordComponent,
   ],
   imports: [
     NbStepperModule,
@@ -16,8 +18,9 @@ import {CommonModule} from '@angular/common';
     FormsModule,
     NbCardModule,
     CommonModule,
-    NbButtonModule
+    NbButtonModule,
+    NbTableModule
   ],
   providers: []
 })
-export class SessionLogModule { }
+export class SessionModule { }

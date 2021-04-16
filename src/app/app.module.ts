@@ -21,7 +21,7 @@ import {SidebarComponent} from './base/sidebar/sidebar.component';
 import {RouterModule} from '@angular/router';
 import {routes} from '@nebular/auth';
 import {SidebarModule} from './base/sidebar/sidebar.module';
-import {SessionLogModule} from './features/session-log/session-log.module';
+import {SessionModule} from './features/session/session.module';
 import {NbSharedModule} from '@nebular/theme/components/shared/shared.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
@@ -37,7 +37,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     SidebarModule,
-    SessionLogModule,
+    SessionModule,
     ReactiveFormsModule,
     FormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),

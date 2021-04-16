@@ -3,6 +3,7 @@ import { SessionLogComponent } from './session-log.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {FormBuilder, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterTestingModule} from '@angular/router/testing';
+import {NbStepperComponent, NbStepperNextDirective, NbStepperPreviousDirective} from '@nebular/theme';
 
 describe('SessionLogComponent', () => {
   let fixture: ComponentFixture<SessionLogComponent>;
@@ -11,9 +12,9 @@ describe('SessionLogComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SessionLogComponent ],
+      declarations: [ SessionLogComponent, NbStepperComponent ],
       imports: [ReactiveFormsModule, FormsModule],
-      providers: [RouterTestingModule ],
+      providers: [RouterTestingModule, NbStepperNextDirective, NbStepperPreviousDirective ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
@@ -46,18 +47,20 @@ describe('SessionLogComponent', () => {
       expect(previousButton.getAttributeNode('disabled')).toBeTruthy();
     });
 
-    it('should display step 2 when Next clicked', () => {
+    it('should display step 2 when Next clicked', async () => {
+      await component.onFirstSubmit();
+      fixture.detectChanges();
       const whatToPractice = compiled.querySelector('[data-step-2]');
       expect(whatToPractice).toBeTruthy();
     });
   });
 
   describe('Step 2', () => {
-    it('should display step 3 when Next clicked', () => {
+    it('should display step 3 when Next clicked', async () => {
+      await component.onSecondSubmit();
+      fixture.detectChanges();
       const sessionGoal = compiled.querySelector('[data-step-3]');
       expect(sessionGoal).toBeTruthy();
     });
   });
-
-
 });

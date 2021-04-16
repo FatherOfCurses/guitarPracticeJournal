@@ -1,0 +1,30 @@
+<nb-card>
+  <nb-layout-header><h2>Start a session</h2></nb-layout-header>
+</nb-card>
+
+<nb-card>
+  <nb-card-body>
+    <form [formGroup]="session" (ngSubmit)="onSubmit()">
+      <label>
+        Enter the time (in minutes) that you want to practice:
+        <input type="text" formControlName="practiceTime">
+      </label>
+      <label>
+        What are you planning on practicing today?
+        <textarea formControlName="whatToPractice"></textarea>
+      </label>
+      <label>
+        Practice requires intent. Take a moment, think of your intention for this session, and write it here:"
+      <input type="text" formControlName="sessionIntent">
+      </label>
+      <button>Start!</button>
+    </form>
+  </nb-card-body>
+</nb-card>
+
+
+<nb-card>
+  <nb-layout-header>
+    <h6 style="text-align: center">Previous Sessions</h6>
+  </nb-layout-header>
+</nb-card>

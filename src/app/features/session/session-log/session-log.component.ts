@@ -1,7 +1,6 @@
-import {Component, OnInit, EventEmitter} from '@angular/core';
-import {FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup } from '@angular/forms';
 import {Router} from '@angular/router';
-import {Session} from '../../../models/session';
 
 @Component({
   selector: 'app-session-log',
@@ -21,6 +20,7 @@ export class SessionLogComponent implements OnInit {
   }
 
   onSubmit(): void {
+    // capture the date, maybe time
     console.log(this.session);
     this.router.navigate(['/sessionRecord']);
   }

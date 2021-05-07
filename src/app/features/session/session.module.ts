@@ -9,14 +9,18 @@ import {
   NbTableModule
 } from '@nebular/theme';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {SessionLogComponent} from './session-log/session-log.component';
+import {SessionPlanComponent} from './session-plan/session-plan.component';
 import {CommonModule} from '@angular/common';
-import { SessionRecordComponent } from './session-record/session-record.component';
+import { SessionLogComponent } from './session-log/session-log.component';
+import {SessionDataService} from '../services/session-data-service';
+import {CountdownComponent, CountdownModule} from 'ngx-countdown';
+import { TimerComponent } from './timer/timer.component';
 
 @NgModule({
   declarations: [
+    SessionPlanComponent,
     SessionLogComponent,
-    SessionRecordComponent,
+    TimerComponent,
   ],
   imports: [
     NbStepperModule,
@@ -28,8 +32,9 @@ import { SessionRecordComponent } from './session-record/session-record.componen
     CommonModule,
     NbButtonModule,
     NbTableModule,
-    NbProgressBarModule
+    NbProgressBarModule,
+    CountdownModule
   ],
-  providers: []
+  providers: [SessionDataService],
 })
 export class SessionModule { }

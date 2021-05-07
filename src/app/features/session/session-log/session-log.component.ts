@@ -1,35 +1,30 @@
-import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup } from '@angular/forms';
-import {Router} from '@angular/router';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import { Observable, Subscription} from 'rxjs';
+import {Session} from '../../../models/session';
+import {SessionDataService} from '../../services/session-data-service';
+
 
 @Component({
-  selector: 'app-session-log',
+  selector: 'app-session-record',
   templateUrl: './session-log.component.html',
   styleUrls: ['./session-log.component.scss']
 })
+export class SessionLogComponent implements OnInit, OnDestroy {
+  actualSession: Session;
+  sessionSubscription: Subscription;
+  timerBar: Observable<number>;
+  sessionLength: number;
 
-export class SessionLogComponent implements OnInit {
-  session: FormGroup;
+  constructor(private sessionData: SessionDataService) { }
 
-  constructor(
-    private fb: FormBuilder, private router: Router) {
+  ngOnInit(): void {
+    this.sessionLength = this.actualSession.practiceTime;
+    this.sessionSubscription = this.sessionData.currentSession.subscribe(
+      actualSession => this.actualSession = actualSession
+    );
   }
 
-  ngOnInit() {
-    this.initializeForm();
-  }
-
-  onSubmit(): void {
-    // capture the date, maybe time
-    console.log(this.session);
-    this.router.navigate(['/sessionRecord']);
-  }
-
-  private initializeForm(): void {
-    this.session = this.fb.group({
-      practiceTime: 0,
-      whatToPractice: '',
-      sessionIntent: ''
-    });
+  ngOnDestroy() {
+    this.sessionSubscription.unsubscribe();
   }
 }

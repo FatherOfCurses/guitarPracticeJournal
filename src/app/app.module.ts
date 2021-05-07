@@ -24,6 +24,7 @@ import {SidebarModule} from './base/sidebar/sidebar.module';
 import {SessionModule} from './features/session/session.module';
 import {NbSharedModule} from '@nebular/theme/components/shared/shared.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { SessionRecordComponent } from './features/session/session-record/session-record.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
+    SessionRecordComponent,
   ],
   imports: [
     BrowserModule,

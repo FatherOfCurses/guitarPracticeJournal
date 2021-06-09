@@ -1,7 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {Observable, Subscription, timer} from 'rxjs';
-import {SessionDataService} from '../../services/session-data-service';
-import {filter, switchMap, takeUntil} from 'rxjs/operators';
+import {Component, OnInit} from '@angular/core';
+import {Observable, timer} from 'rxjs';
+import {filter} from 'rxjs/operators';
 
 @Component({
   selector: 'app-timer',
@@ -15,7 +14,7 @@ export class TimerComponent implements OnInit {
   displayTime: number;
   currentTimerValue: Observable<any>;
 
-  constructor(private sessionData: SessionDataService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }

@@ -1,8 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import { Observable, Subscription} from 'rxjs';
 import {Session} from '../../../models/session';
-import {SessionDataService} from '../../services/session-data-service';
-
 
 @Component({
   selector: 'app-session-record',
@@ -15,13 +13,10 @@ export class SessionLogComponent implements OnInit, OnDestroy {
   timerBar: Observable<number>;
   sessionLength: number;
 
-  constructor(private sessionData: SessionDataService) { }
+  constructor() { }
 
   ngOnInit(): void {
     this.sessionLength = this.actualSession.practiceTime;
-    this.sessionSubscription = this.sessionData.currentSession.subscribe(
-      actualSession => this.actualSession = actualSession
-    );
   }
 
   ngOnDestroy() {

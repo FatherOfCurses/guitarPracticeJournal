@@ -12,8 +12,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {SessionPlanComponent} from './session-plan/session-plan.component';
 import {CommonModule} from '@angular/common';
 import { SessionLogComponent } from './session-log/session-log.component';
-import {SessionDataService} from '../services/session-data-service';
-import {CountdownComponent, CountdownModule} from 'ngx-countdown';
+import { CountdownModule} from 'ngx-countdown';
 import { TimerComponent } from './timer/timer.component';
 
 @NgModule({
@@ -35,6 +34,6 @@ import { TimerComponent } from './timer/timer.component';
     NbProgressBarModule,
     CountdownModule
   ],
-  providers: [SessionDataService],
+  providers: [],
 })
 export class SessionModule { }

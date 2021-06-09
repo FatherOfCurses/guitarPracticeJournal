@@ -4,7 +4,6 @@ import {Router} from '@angular/router';
 import {Session} from '../../../models/session';
 import * as dayjs from 'dayjs';
 import {Subscription} from 'rxjs';
-import {SessionDataService} from '../../services/session-data-service';
 
 @Component({
   selector: 'app-session-log',
@@ -23,14 +22,11 @@ export class SessionPlanComponent implements OnInit, OnDestroy {
   };
 
   constructor(
-    private fb: FormBuilder, private router: Router, private sessionData: SessionDataService) {
+    private fb: FormBuilder, private router: Router) {
   }
 
   ngOnInit() {
     this.initializeForm();
-    this.sessionSubscription = this.sessionData.currentSession.subscribe(
-      sessionPlan => this.sessionPlan = sessionPlan
-    );
   }
 
   onSubmit(): void {

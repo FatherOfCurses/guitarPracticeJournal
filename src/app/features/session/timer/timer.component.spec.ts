@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { TimerComponent } from './timer.component';
 
 describe('TimerComponent', () => {
@@ -22,10 +21,6 @@ describe('TimerComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  it('should start timer when start button clicked', () => {
-
-  })
 
   // display a timer
   // display correct time on timer

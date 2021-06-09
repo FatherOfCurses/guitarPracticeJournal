@@ -22,4 +22,6 @@ describe('SessionRecordComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  // test click finish button
 });

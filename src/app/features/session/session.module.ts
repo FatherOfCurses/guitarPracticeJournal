@@ -9,16 +9,16 @@ import {
   NbTableModule
 } from '@nebular/theme';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {SessionPlanComponent} from './session-plan/session-plan.component';
+import {SessionBeforeComponent} from './session-before/session-before.component';
 import {CommonModule} from '@angular/common';
-import { SessionLogComponent } from './session-log/session-log.component';
+import { SessionAfterComponent } from './session-after/session-after.component';
 import { CountdownModule} from 'ngx-countdown';
 import { TimerComponent } from './timer/timer.component';
 
 @NgModule({
   declarations: [
-    SessionPlanComponent,
-    SessionLogComponent,
+    SessionBeforeComponent,
+    SessionAfterComponent,
     TimerComponent,
   ],
   imports: [

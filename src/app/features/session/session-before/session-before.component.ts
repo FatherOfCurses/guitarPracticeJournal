@@ -7,11 +7,11 @@ import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-session-log',
-  templateUrl: './session-plan.component.html',
-  styleUrls: ['./session-plan.component.scss']
+  templateUrl: './session-before.component.html',
+  styleUrls: ['./session-before.component.scss']
 })
 
-export class SessionPlanComponent implements OnInit, OnDestroy {
+export class SessionBeforeComponent implements OnInit, OnDestroy {
   sessionForm: FormGroup;
   sessionSubscription: Subscription;
   sessionPlan: Session = {
@@ -34,7 +34,7 @@ export class SessionPlanComponent implements OnInit, OnDestroy {
     this.sessionPlan.practiceTime = this.sessionForm.value.practiceTime;
     this.sessionPlan.whatToPractice = this.sessionForm.value.whatToPractice;
     this.sessionPlan.sessionIntent = this.sessionForm.value.sessionIntent;
-    this.router.navigate(['/sessionRecord']);
+    this.router.navigate(['/sessionDuring']);
   }
 
   ngOnDestroy() {

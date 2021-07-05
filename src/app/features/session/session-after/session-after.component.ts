@@ -4,10 +4,10 @@ import {Session} from '../../../models/session';
 
 @Component({
   selector: 'app-session-record',
-  templateUrl: './session-log.component.html',
-  styleUrls: ['./session-log.component.scss']
+  templateUrl: './session-after.component.html',
+  styleUrls: ['./session-after.component.scss']
 })
-export class SessionLogComponent implements OnInit, OnDestroy {
+export class SessionAfterComponent implements OnInit, OnDestroy {
   actualSession: Session;
   sessionSubscription: Subscription;
   timerBar: Observable<number>;

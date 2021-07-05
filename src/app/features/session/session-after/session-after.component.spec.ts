@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SessionLogComponent } from './session-log.component';
+import { SessionAfterComponent } from './session-after.component';
 
 describe('SessionRecordComponent', () => {
-  let component: SessionLogComponent;
-  let fixture: ComponentFixture<SessionLogComponent>;
+  let component: SessionAfterComponent;
+  let fixture: ComponentFixture<SessionAfterComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SessionLogComponent ]
+      declarations: [ SessionAfterComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SessionLogComponent);
+    fixture = TestBed.createComponent(SessionAfterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

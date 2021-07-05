@@ -1,16 +1,16 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { SessionPlanComponent } from './session-plan.component';
+import { SessionBeforeComponent } from './session-before.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { FormBuilder, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterTestingModule} from '@angular/router/testing';
 import {Session} from '../../../models/session';
 import {Router} from '@angular/router';
-import {SessionLogComponent} from '../session-log/session-log.component';
+import {SessionAfterComponent} from '../session-after/session-after.component';
 import * as path from 'path';
 
 describe('SessionLogComponent', () => {
-  let fixture: ComponentFixture<SessionPlanComponent>;
-  let component: SessionPlanComponent;
+  let fixture: ComponentFixture<SessionBeforeComponent>;
+  let component: SessionBeforeComponent;
   let compiled: Element;
   let router: Router;
   const testSession: Session = {
@@ -23,14 +23,14 @@ describe('SessionLogComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SessionPlanComponent, SessionLogComponent ],
+      declarations: [ SessionBeforeComponent, SessionAfterComponent ],
       imports: [ReactiveFormsModule,
-        RouterTestingModule.withRoutes([{path: 'sessionRecord', component: SessionLogComponent}])],
+        RouterTestingModule.withRoutes([{path: 'sessionRecord', component: SessionAfterComponent}])],
       providers: [RouterTestingModule ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
-    fixture = TestBed.createComponent(SessionPlanComponent);
+    fixture = TestBed.createComponent(SessionBeforeComponent);
     component = fixture.componentInstance;
     compiled = fixture.nativeElement;
     router = TestBed.inject(Router);

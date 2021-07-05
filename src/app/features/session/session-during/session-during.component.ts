@@ -3,10 +3,10 @@ import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-session-record',
-  templateUrl: './session-record.component.html',
-  styleUrls: ['./session-record.component.scss']
+  templateUrl: './session-during.component.html',
+  styleUrls: ['./session-during.component.scss']
 })
-export class SessionRecordComponent implements OnInit {
+export class SessionDuringComponent implements OnInit {
 
 
   constructor(private router: Router) { }

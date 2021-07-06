@@ -10,6 +10,7 @@ import {
 } from '@nebular/theme';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {SessionBeforeComponent} from './session-before/session-before.component';
+import {SessionDuringComponent} from './session-during/session-during.component';
 import {CommonModule} from '@angular/common';
 import { SessionAfterComponent } from './session-after/session-after.component';
 import { CountdownModule} from 'ngx-countdown';
@@ -18,6 +19,7 @@ import { TimerComponent } from './timer/timer.component';
 @NgModule({
   declarations: [
     SessionBeforeComponent,
+    SessionDuringComponent,
     SessionAfterComponent,
     TimerComponent,
   ],

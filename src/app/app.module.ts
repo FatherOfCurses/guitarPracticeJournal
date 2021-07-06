@@ -32,8 +32,7 @@ import { SessionDuringComponent } from './features/session/session-during/sessio
     LandingPageComponent,
     HeaderComponent,
     FooterComponent,
-    SidebarComponent,
-    SessionDuringComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

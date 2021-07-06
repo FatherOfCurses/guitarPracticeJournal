@@ -1,17 +1,16 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import { SessionBeforeComponent } from './session-before.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import { FormBuilder, FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ReactiveFormsModule} from '@angular/forms';
 import {RouterTestingModule} from '@angular/router/testing';
 import {Session} from '../../../models/session';
 import {Router} from '@angular/router';
 import {SessionAfterComponent} from '../session-after/session-after.component';
-import * as path from 'path';
+import {SessionDuringComponent} from '../session-during/session-during.component';
 
 describe('SessionLogComponent', () => {
   let fixture: ComponentFixture<SessionBeforeComponent>;
   let component: SessionBeforeComponent;
-  let compiled: Element;
   let router: Router;
   const testSession: Session = {
     date: '2021-01-01',
@@ -20,22 +19,20 @@ describe('SessionLogComponent', () => {
     sessionIntent: 'Git gud'
   };
 
-
-  beforeEach(async(() => {
+  beforeEach( () => {
     TestBed.configureTestingModule({
-      declarations: [ SessionBeforeComponent, SessionAfterComponent ],
+      declarations: [ SessionBeforeComponent, SessionDuringComponent ],
       imports: [ReactiveFormsModule,
-        RouterTestingModule.withRoutes([{path: 'sessionRecord', component: SessionAfterComponent}])],
-      providers: [RouterTestingModule ],
+        RouterTestingModule.withRoutes([{path: 'sessionDuring', component: SessionDuringComponent}])],
+      providers: [],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
     fixture = TestBed.createComponent(SessionBeforeComponent);
     component = fixture.componentInstance;
-    compiled = fixture.nativeElement;
     router = TestBed.inject(Router);
     fixture.detectChanges();
-  }));
+  });
 
 
   it('should create', () => {
@@ -46,7 +43,7 @@ describe('SessionLogComponent', () => {
     component.onSubmit();
     fixture.detectChanges();
     await fixture.whenStable();
-    expect(router.url).toBe('/sessionRecord');
+    expect(router.url).toBe('/sessionDuring');
   });
 
 });

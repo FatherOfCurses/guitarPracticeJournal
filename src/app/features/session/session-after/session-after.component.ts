@@ -16,7 +16,7 @@ export class SessionAfterComponent implements OnInit, OnDestroy {
   constructor() { }
 
   ngOnInit(): void {
-    this.sessionLength = this.actualSession.practiceTime;
+    // this.sessionLength = this.actualSession.practiceTime;
   }
 
   ngOnDestroy() {

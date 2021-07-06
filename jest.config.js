@@ -6,16 +6,16 @@ module.exports = {
   testMatch: ['<rootDir>/**/+(*.)+(spec).+(ts)'],
   testPathIgnorePatterns: ['/node-modules'],
   setupFilesAfterEnv: ['<rootDir>/src/setup-jest.ts'],
-  // collectCoverage: true,
-  // coverageReporters: ['html'],
-  // coverageDirectory: 'coverage/my-app',
-  // verbose: true,
-  // moduleFileExtensions: [
-  //   "js",
-  //   "jsx",
-  //   "ts"
-  // ],
-  // moduleDirectories: [
-  //   "node_modules"
-  // ]
+  collectCoverage: true,
+  coverageReporters: ['text-summary'],
+  coverageDirectory: 'coverage/my-app',
+  verbose: true,
+  moduleFileExtensions: [
+      "js",
+     "jsx",
+     "ts"
+   ],
+   moduleDirectories: [
+     "node_modules"
+   ]
 };

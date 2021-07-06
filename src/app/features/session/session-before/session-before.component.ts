@@ -2,8 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup } from '@angular/forms';
 import {Router} from '@angular/router';
 import {Session} from '../../../models/session';
-import * as dayjs from 'dayjs';
-import {Subscription} from 'rxjs';
+import dayjs from 'dayjs';
 
 @Component({
   selector: 'app-session-log',
@@ -11,9 +10,8 @@ import {Subscription} from 'rxjs';
   styleUrls: ['./session-before.component.scss']
 })
 
-export class SessionBeforeComponent implements OnInit, OnDestroy {
+export class SessionBeforeComponent implements OnInit {
   sessionForm: FormGroup;
-  sessionSubscription: Subscription;
   sessionPlan: Session = {
     date: '',
     practiceTime: 0,
@@ -34,11 +32,7 @@ export class SessionBeforeComponent implements OnInit, OnDestroy {
     this.sessionPlan.practiceTime = this.sessionForm.value.practiceTime;
     this.sessionPlan.whatToPractice = this.sessionForm.value.whatToPractice;
     this.sessionPlan.sessionIntent = this.sessionForm.value.sessionIntent;
-    this.router.navigate(['/sessionDuring']);
-  }
-
-  ngOnDestroy() {
-    this.sessionSubscription.unsubscribe();
+    this.router.navigate(['sessionDuring']).then();
   }
 
   private initializeForm(): void {

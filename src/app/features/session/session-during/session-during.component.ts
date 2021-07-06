@@ -15,7 +15,7 @@ export class SessionDuringComponent implements OnInit {
   }
 
   finishSession(): void {
-    this.router.navigate(['/sessionLog']);
+    this.router.navigate(['/sessionAfter']).then();
   }
 
 }

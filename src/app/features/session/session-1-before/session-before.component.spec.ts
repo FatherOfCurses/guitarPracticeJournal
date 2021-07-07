@@ -6,7 +6,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import {Router} from '@angular/router';
 import {SessionDuringComponent} from '../session-2-during/session-during.component';
 
-describe('SessionLogComponent', () => {
+describe('SessionBeforeComponent', () => {
   let fixture: ComponentFixture<SessionBeforeComponent>;
   let startButton: any;
   let component: SessionBeforeComponent;

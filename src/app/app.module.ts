@@ -24,7 +24,7 @@ import {SidebarModule} from './base/sidebar/sidebar.module';
 import {SessionModule} from './features/session/session.module';
 import {NbSharedModule} from '@nebular/theme/components/shared/shared.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { SessionDuringComponent } from './features/session/session-during/session-during.component';
+import { SessionDuringComponent } from './features/session/session-2-during/session-during.component';
 
 @NgModule({
   declarations: [

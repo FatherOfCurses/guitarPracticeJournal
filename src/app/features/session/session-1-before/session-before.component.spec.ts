@@ -4,7 +4,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
 import {Router} from '@angular/router';
-import {SessionDuringComponent} from '../session-during/session-during.component';
+import {SessionDuringComponent} from '../session-2-during/session-during.component';
 
 describe('SessionLogComponent', () => {
   let fixture: ComponentFixture<SessionBeforeComponent>;
